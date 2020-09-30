@@ -27,5 +27,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tone": "^13.8.25",
+    "webaudiofont": "^2.5.48",
+    "webmidi": "^2.5.1"
   }
 }

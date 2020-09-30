@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360);
+  }
+}
+
+.note {
+  position: relative;
+  display: inline-block;
+  border-radius: 1000px;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  overflow: hidden;
+  margin: 2px 4px;
+}
+
+.synth--0 .note {
+  border: 2px solid rgba(0, 255, 255, 0.8);
+}
+.synth--1 .note {
+  border: 2px solid rgba(255, 255, 0, 0.8);
+}
+.synth--2 .note {
+  border: 2px solid rgba(255, 0, 255, 0.8);
+}
+.synth--3 .note {
+  border: 2px solid rgba(255, 50, 50, 0.8);
+}
+
+.note--0.note--on {
+  background-color: #e4ff6d;
+  background-image: linear-gradient(319deg, #e4ff6d 0%, #ffad42 37%, #e4ff6d 100%);
+}
+.note--1.note--on {
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+.note--2.note--on {
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+}
+.note--3.note--on {
+  background-color: #f876de;
+  background-image: linear-gradient(315deg, #f876de 0%, #b9d1eb 74%);
+}
+
+.note img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  opacity: 0;
+  transform: rotate(45deg);
+  transition: transform cubic-bezier(1, 0, 0, 1) 250ms;
+}
+
+.note--on img {
+  opacity: 1 !important;
+  transform: rotate(-45deg) !important;
+}
